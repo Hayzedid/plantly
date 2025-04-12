@@ -13,7 +13,7 @@ export function PlantlyButton({ title, onPress }: Props) {
     onPress();
   }};
   return (
-    <Pressable onPress={onPress} style={ ({pressed}) => {
+    <Pressable onPress={handlePress} style={ ({pressed}) => {
       if(pressed){
         return [styles.button, styles.buttonPressed ]
       }
@@ -29,15 +29,16 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 18,
     fontWeight: "bold",
+    textAlign: "center",
   },
   button: {
     paddingHorizontal: 18,
     paddingVertical: 12,
     borderRadius: 6,
-    backgroundColor: "Green",
+    backgroundColor: "green",
   },
   buttonPressed:{
     opacity: 0.5,
-    color: "blue",
+    color: "black",
   }
 });
